@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+
+        @keyframes move {
+        0% {left: -600px;}
+        100%{ left: 1000px ;}
+            
+        }
+        .heading{
+            width: 50vw;
+            position: relative;
+            text-align: center;
+            border: 2px solid black;
+            background-image: linear-gradient(to right, purple, yellow 100%);
+            animation: move 4s ease-in-out infinite  ;
+        }
+        .border{
+            display: flexbox;
+            position: relative;
+            left: 25vw;
+            height: 70vh;
+            width:35vw;
+            border: 1px solid black;
+            box-shadow: 0px 0px 10px rgba(212, 15, 15, 0.2);
+
+        }
+        P{
+            text-align: center;
+            font-size: 2vw;
+            font-weight: bold;
+            margin: 0;
+padding: 0;
+        }
+        .screen{
+           color: azure;
+            position: relative;
+            height: 8vh;
+            width: 28vw;
+            background-color: rgb(243, 243, 243);
+        margin: 5px auto;
+        
+       
+
+        }
+        #input{
+
+            color: azure;
+            position: relative;
+            height: 8vh;
+            width: 28vw;
+            background-color: black;
+        margin: 5px auto;
+       font-size: 2vw;
+       text-align: right;
+        }
+        .buttons{
+            width: 30vw;
+            height: 40vh;
+            background-color: rgb(150, 184, 192);
+            margin: 50px auto;
+        }
+        .btn{
+            background-color: #51d36d;
+            width: 5vw;
+            height: 8vh;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .o{
+            background-color: #aa6161;
+            font-size: 2vw;
+            color: aliceblue;
+        }
+        .space{
+            width: 10vw;
+            background-color: rgb(113, 107, 189);
+            color: black;
+            margin-top: 10px;
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+       button:hover{
+        background-color: #c02727;
+       }
+    </style>
+</head>
+<body>
+    <h1 class="heading">Made by Bro</h1>
+    <div class="border"><P> CALCULATOR</P>
+    <div class="screen">
+        <input type="text" id="input">
+    </div>
+    <div class="buttons">
+
+        <button class="one btn" onclick="addToInput('1')">1</button>
+
+        <button class="two btn" onclick="addToInput('2')">2</button>
+        <button class="three btn" onclick="addToInput('3')">3</button>
+        <button class="four btn" onclick="addToInput('4')" >4</button>
+        <button class="five btn" onclick="addToInput('5')">5</button>
+        <button class="six btn"  onclick="addToInput('6')">6</button>
+        <button class="seven btn" onclick="addToInput('7')">7</button>
+        <button class="eight btn"  onclick="addToInput('8')">8</button>
+        <button class="nine btn" onclick="addToInput('9')" >9</button>
+        <button class="ten btn" onclick="addToInput('0')">0</button>
+        <br><br><br>
+        <hr>
+        <button class="add btn o"  onclick="addToInput('+')">+</button>
+        <button class="subtract btn o"  onclick="addToInput('-')">-</button>
+        <button class="divide btn o"  onclick="addToInput('/')">/</button>
+        <button class="multiply btn o"  onclick="addToInput('*')">*</button>
+        <button class="equalto btn o" onclick="calculate()" >=</button>
+        <button class="btn o space" onclick="clearspace()">back</button>
+    </div>
+    </div>
+    <script>
+          let inpu = document.getElementById('input');
+
+function addToInput(value) {
+
+	inpu.value += value;
+    // inp.value = value + value;
+
+}
+
+function calculate(){
+  input.value =  eval(input.value);
+}
+
+function clearspace(){
+    input.value = input.value.slice(0,-1);
+}
+
+prompt("Please enter your name ?");
+
+alert("Identity not verified !!  , but who cares.")
+
+        
+    </script>
+
+</body>
+</html>
